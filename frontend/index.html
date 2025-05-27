@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList App</title>
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Alternar tema">
+        <span id="theme-icon">🌙</span>
+    </button>
+
+    <div class="container">
+        <div class="header">
+            <h1>Lista de Tarefas</h1>
+            <p>Organize suas tarefas de forma simples e eficiente</p>
+        </div>
+        
+        <div id="error-container"></div>
+        
+        <div class="input-section">
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    class="input"
+                    placeholder="Adicionar nova tarefa..."
+                    maxlength="200"
+                >
+                <button id="addBtn" class="btn btn-primary">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="pending">Pendentes</button>
+            <button class="filter-btn" data-filter="completed">Concluídas</button>
+        </div>
+
+        <div class="stats">
+            <span id="statsText">0 tarefas</span>
+        </div>
+
+        <ul id="todoList" class="todo-list">
+            <div class="loading" id="loading">Carregando tarefas...</div>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
